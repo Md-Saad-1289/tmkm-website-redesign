@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamirul Millat Kamil Madrasah</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="extra.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION (Contact Page) -->
+    <header class="hero-about contact-hero" role="banner" aria-label="Contact hero">
+        <div class=" hero-about-inner">
+            <h1>Contact Tamirul Millat Kamil Madrasah (TMKM)</h1>
+            <p class="lead">
+                We welcome visitors, prospective students, and families. For admissions, campus tours, or any enquiries,
+                please use the map, call, email, or send a message using the form below — we’ll respond as quickly as
+                possible.
+            </p>
+            <div class="cta" role="navigation" aria-label="Contact actions">
+                <a class="btn btn-primary" href="#location">Find Us on Map</a>
+                <a class="btn btn-outline" href="#contact-form">Send a Message</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAP + IMAGE (side-by-side) -->
+    <section id="location" class="map-image" aria-label="Location and campus image">
+        <div class="map-col">
+            <div class="iframe-wrap" aria-hidden="false">
+                <!-- Google Maps embed (keeps responsive within iframe-wrap) -->
+                <iframe title="Tamirul Millat Kamil Madrasah location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.15515952057!2d90.42626477615077!3d23.706152578700614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9b701a829cf%3A0x39a45f1189bcb15d!2sTamirul%20Millat%20Kamil%20Madrasah!5e0!3m2!1sen!2sbd!4v1763648017516!5m2!1sen!2sbd"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="img-col" aria-hidden="false">
+            <!-- Replace this image URL with your best campus photo -->
+            <img src="https://scontent.fdac41-1.fna.fbcdn.net/v/t39.30808-6/489826247_1072962021524491_230779605707378784_n.jpg?_nc_cat=109&cb2=99be929b-a592a72f&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xY_hBFMaF9YQ7kNvwExhTma&_nc_oc=AdmsGOWjRYFUQpCKfSNG0uir3wkUlTCV1MzmmAb-JFiEc2atM4b-EmaFO3sWVGKIMok&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=J--qXWMQXGkeUljthgFqVw&oh=00_Afi5iptULrz8gX-JLA71c_-sYwNqHLo3xX7jaPA49eOehw&oe=6926035E"
+                alt="Aerial view of Tamirul Millat Kamil Madrasah campus" />
+
+        </div>
+    </section>
+
+    <!-- CONTACT + FORM -->
+    <section id="contact-form" class="contact-us" aria-label="Contact information and form">
+        <div class="row">
+
+            <!-- Contact Info Column -->
+            <div class="content-col contact-info" aria-label="Contact details">
+                <div class="info-item" aria-hidden="false">
+                    <i class="fa fa-location-dot" aria-hidden="true"></i>
+                    <div>
+                        <h5>Campus Address</h5>
+                        <p>315 Mirhajirbag, Jatrabari, Dhaka 1362, Bangladesh</p>
+                    </div>
+                </div>
+
+                <div class="info-item" aria-hidden="false">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div>
+                        <h5>Phone</h5>
+                        <p>+880 1309-108478 — Mon - Sat: 8:00 AM – 6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-item" aria-hidden="false">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div>
+                        <h5>Email</h5>
+                        <p><a href="mailto:tamirulmillat63@gmail.com">tamirulmillat63@gmail.com</a> — Use for admissions
+                            &
+                            general enquiries</p>
+                    </div>
+                </div>
+
+                <div class="info-item" aria-hidden="false">
+                    <i class="fa fa-clock" aria-hidden="true"></i>
+                    <div>
+                        <h5>Visiting Hours</h5>
+                        <p>Monday – Saturday: 9:00 AM – 4:00 PM (Tours available by appointment)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Column -->
+            <div class="content-col contact-form-col" aria-label="Contact form">
+                <form class="contact-form" action="#" method="post" novalidate>
+                    <label for="name" class="sr-only">Your name</label>
+                    <input id="name" name="name" type="text" placeholder="Your full name" required />
+
+                    <label for="email" class="sr-only">Your email</label>
+                    <input id="email" name="email" type="email" placeholder="Your email address" required />
+
+                    <label for="subject" class="sr-only">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Subject (e.g. Admission enquiry)"
+                        required />
+
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" rows="7" placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button type="submit" class="send-btn" aria-label="Send message">Send Message</button>
+
+                    <p style="font-size:0.9rem;color:#666;margin-top:8px;">
+                        By sending this message you agree that TMKM may contact you about your enquiry.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About TMKM -->
+                <div class="footer-about">
+                    <h4>About TMKM</h4>
+                    <p>Tamirul Millat Kamil Madrasah (TMKM) is a leading Islamic educational institution in Dhaka,
+                        blending
+                        modern and traditional knowledge to nurture skilled and ethical students.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-right"></i><a href="about.html#mission">Mission & Vision</a>
+                        </li>
+                        <li><i class="fa-solid fa-chevron-right"></i><a href="index.html#gallery">Gallery</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i><a href="contact.html">Contact Us</a></li>
+                        <li><i class="fa-solid fa-chevron-right"></i><a href="#">Admission</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-map-marker-alt"></i> 315, Mirhajirbag, Jatrabari, Dhaka, Bangladesh
+                        </li>
+                        <li><i class="fa-solid fa-phone"></i> Hotline: +880 1846736382 , +880 1816593084</li>
+                        <li><i class="fa-solid fa-envelope"></i> tamirulmillat63@gmail.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to receive updates, news, and announcements from TMKM.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary"><i class="fa-solid fa-envelope"></i>
+                            Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> Tamirul Millat Kamil Madrasah. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Thank you — your message was captured (demo). Replace with real submission logic.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
