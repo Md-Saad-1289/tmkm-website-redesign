@@ -81,6 +81,14 @@ OR use VS Code Live Server (recommended for auto-refresh):
 # Open project in VS Code
 # Right-click index.html → Open with Live Server
 ```
+## 🌍 Live Preview  
+
+Experience the redesigned TMKM website here:
+
+👉 **🔗 Live Site:**  
+[🚀 Visit TMKM Website Redesign](https://md-saad-1289.github.io/tmkm-website-redesign/)
+
+The site is fully responsive, fast, and built with a clean modern UI to reflect the true spirit of TMKM.
 
 ## 🎓 About Me
 
