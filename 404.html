@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 Not Found</title>
+<style>
+/*======================
+    404 Page
+=======================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    font-family: 'Arvo', serif;
+}
+
+.page_404 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.four_zero_four_bg {
+    background-image: url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif');
+    height: 350px;
+    width: 100%;
+    max-width: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 30px;
+}
+
+.four_zero_four_bg h1 {
+    font-size: 100px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin: 20px 0 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.contant_box_404 h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.story_msg {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.link_404 {
+    color: #fff !important;
+    padding: 12px 30px;
+    background: #39ac31;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link_404:hover {
+    background: #2c7a27;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .four_zero_four_bg { height: 250px; }
+    .four_zero_four_bg h1 { font-size: 70px; }
+    .contant_box_404 h3 { font-size: 24px; }
+    .story_msg { font-size: 16px; line-height: 1.5; }
+}
+
+@media (max-width: 480px) {
+    .four_zero_four_bg { height: 200px; }
+    .four_zero_four_bg h1 { font-size: 50px; }
+    .contant_box_404 h3 { font-size: 20px; }
+    .story_msg { font-size: 14px; line-height: 1.4; }
+    .link_404 { padding: 10px 20px; }
+}
+
+</style>
+</head>
+<body>
+
+<section class="page_404">
+    <div class="four_zero_four_bg">
+        <h1>404</h1>
+    </div>
+    <div class="contant_box_404">
+        <h3>Looks like you're lost</h3>
+        <p class="story_msg">
+            Oops! The page you're looking for hasn't been made yet, but don't worry — it's on its way. 
+            In the meantime, explore other corners of our site and see what surprises await. Adventure is just a click away!
+        </p>
+        <a href="index.html" class="link_404">Go to Home</a>
+    </div>
+</section>
+
+</body>
+</html>

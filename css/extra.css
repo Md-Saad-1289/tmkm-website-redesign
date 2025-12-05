@@ -1,0 +1,2051 @@
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= HERO ================= */
+.hero-about {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+.about-img{
+    background: url('../assets/about-hero.jpg') no-repeat center center/cover;
+}
+.contact-img{
+    background: url('../assets/contact-hero.jpg') no-repeat center center/cover;
+}
+.hero-about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-about-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.hero-about h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.hero-about .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f3f3f3;
+}
+
+.hero-about .cta .btn {
+    margin: 0 .8rem;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #0b4a7a;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0e5c95;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0b4a7a;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #0b4a7a;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ================= INTRO ================= */
+.intro {
+    display: flex;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro .text {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro .text:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.intro .text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro .text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.intro .photo {
+    flex: 1;
+}
+
+/* ================= MISSION / VISION / VALUES ================= */
+#mission {
+    background-color: #fefefe;
+    padding: 5rem 2rem;
+}
+
+#mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #0b4a7a;
+}
+
+#mission .mv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#mission .card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    flex: 1 1 280px;
+    max-width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#mission .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#mission .icon {
+    font-size: 2.8rem;
+    color: #0b4a7a;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+#mission .icon:hover {
+    transform: rotate(15deg);
+}
+
+#mission .values .pill {
+    display: inline-block;
+    margin: 4px 4px;
+    padding: 0.4rem 1rem;
+    background-color: #0b4a7a;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#mission .values .pill:hover {
+    transform: scale(1.1);
+    background-color: #0e5c95;
+}
+
+/* ================= TIMELINE ================= */
+.timeline {
+    background-color: #f4f6f8;
+    padding: 5rem 2rem;
+}
+
+.timeline h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #0b4a7a;
+}
+
+.timeline .list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.t-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.timeline .year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0b4a7a;
+}
+
+/* ================= PRINCIPAL MESSAGE ================= */
+.leader {
+    display: flex;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.leader img {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leader .card {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leader .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+}
+
+
+/* ================= CAMPUS OVERVIEW ================= */
+.campus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 5rem 2rem;
+    justify-content: center;
+}
+
+.campus h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    color: #0b4a7a;
+}
+
+.campus-card {
+    flex: 1 1 220px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campus-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.campus-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-align: center;
+    color: #0b4a7a;
+}
+
+.section-header p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 12px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+#gallery {
+    padding: 0rem 6rem;
+    padding-bottom: 5rem;
+}
+
+/* ===== GALLERY MODAL ===== */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.gallery-modal .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.gallery-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.gallery-modal .close:hover {
+    color: red;
+    transform: rotate(90deg);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.modal-nav button {
+    pointer-events: all;
+    border: none;
+    color: #504d4d;
+    font-size: 2.5rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+}
+
+.modal-nav button:hover {
+    transform: scale(1.2);
+    color: #504d4d;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .gallery-item img {
+        height: 150px;
+    }
+
+    .modal-nav button {
+        font-size: 2rem;
+        padding: 10px 12px;
+    }
+
+    #gallery {
+        padding: 0rem 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .gallery-modal .close {
+        font-size: 2rem;
+        padding: 10px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-item img {
+        height: 120px;
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+
+    .intro,
+    .leader {
+        flex-direction: column;
+    }
+
+    .leader img {
+        margin-bottom: 1.5rem;
+    }
+
+    .faculty,
+    .campus,
+    .achieve,
+    .why {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero .lead {
+        font-size: 1rem;
+    }
+
+    .gallery-strip img {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+    background: #0b4a7a;
+    /* primary color */
+    color: #fff;
+    padding: 60px 15%;
+    /* add side gaps using percentage */
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f6b428;
+    /* accent color */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+}
+
+footer h4::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #f6b428;
+    /* accent color */
+    margin-top: 6px;
+    border-radius: 4px;
+}
+
+footer p {
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-about .footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #f6b428;
+    color: #0b4a7a;
+    transform: scale(1.1);
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links li i,
+.footer-contact li i {
+    color: #f6b428;
+    min-width: 18px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.footer-newsletter .btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f9d976 0%, #f6b428 100%);
+    color: #0b4a7a;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(11, 74, 122, 0.25);
+}
+
+.footer-newsletter .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 74, 122, 0.35);
+    background: linear-gradient(135deg, #f6b428 0%, #f9d976 100%);
+}
+
+/* ===== FOOTER BOTTOM (Centered) ===== */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    /* center the text */
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width: 1024px) {
+    footer {
+        padding: 60px 10%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 60px 5%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+
+    .footer-newsletter input[type="email"],
+    .footer-newsletter .btn-primary {
+        width: 100%;
+    }
+}
+
+/* ===== Contact Us Section ===== */
+.contact-us {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+}
+
+.contact-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.contact-us .content-col {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* ===== Contact Info Cards ===== */
+.contact-us .content-col>div {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-us .content-col>div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-us .content-col i {
+    font-size: 2.2rem;
+    color: #0b4a7a;
+    margin-right: 20px;
+    min-width: 50px;
+}
+
+.contact-us .content-col span h5 {
+    font-size: 1.1rem;
+    color: #0b4a7a;
+}
+
+.contact-us .content-col span p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ================= MAP + IMAGE (side-by-side) ================= */
+#location.map-image,
+.map-image {
+    display: flex;
+    gap: 28px;
+    align-items: stretch;
+    padding: 3rem 15%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.map-image .map-col,
+.map-image .img-col {
+    flex: 1 1 0;
+    min-width: 260px;
+}
+
+/* responsive iframe wrapper maintaining aspect ratio */
+.iframe-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    background: #f3f5f7;
+}
+
+.iframe-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Image column */
+.map-image .img-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.map-image .img-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    max-height: 420px;
+}
+
+/* image caption / info card under or next to image */
+.img-caption {
+    background: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.img-caption strong {
+    display: block;
+    color: #0b4a7a;
+    margin-bottom: 4px;
+}
+
+.img-caption span {
+    display: block;
+    color: #555;
+    font-size: 0.92rem;
+}
+
+/* ================= CONTACT SECTION ================= */
+#contact-form.contact-us,
+.contact-us {
+    padding: 3rem 15%;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.contact-us .row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* columns */
+.content-col {
+    flex: 1 1 0;
+    min-width: 280px;
+}
+
+/* left info column styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #0b4a7a;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(246, 180, 40, 0.07);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.info-item h5 {
+    font-size: 1rem;
+    margin: 0 0 4px;
+    color: #0b4a7a;
+}
+
+.info-item p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* right form column */
+.contact-form-col .contact-form,
+.contact-us form {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-us form input,
+.contact-us form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    font-size: 0.95rem;
+    background: #fbfbfb;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    box-sizing: border-box;
+}
+
+.contact-form textarea,
+.contact-us form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* focus state */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-us form input:focus,
+.contact-us form textarea:focus {
+    outline: none;
+    border-color: #0b4a7a;
+    box-shadow: 0 0 10px rgba(11, 74, 122, 0.12);
+}
+
+/* submit button */
+.send-btn {
+    align-self: flex-start;
+    padding: 11px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9d976 0%, #f6b428 100%);
+    color: #0b4a7a;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(11, 74, 122, 0.08);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.send-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(11, 74, 122, 0.12);
+}
+
+/* ================= LOCATION overlay  ================= */
+.location .map-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.location .map-overlay {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    background: rgba(11, 74, 122, 0.88);
+    color: #fff;
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    max-width: 320px;
+}
+
+.location .map-overlay h3 {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    color: #fff;
+}
+
+.location .map-overlay p {
+    margin: 0 0 10px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.location .map-overlay .btn-primary {
+    display: inline-block;
+    background: #f6b428;
+    color: #0b4a7a;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.location .map-overlay .btn-primary:hover {
+    background: #0b4a7a;
+    color: #f6b428;
+    transform: translateY(-3px);
+}
+
+/* =====RESPONSIVE CSS ===== */
+
+/* ===== Large Tablets & Small Desktops (1024px and below) ===== */
+@media (max-width: 1024px) {
+
+    /* Hero Section */
+    .hero-about h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-about .lead {
+        font-size: 1.1rem;
+    }
+
+    /* Intro Section */
+    .intro {
+        padding: 4rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .intro .text {
+        padding: 1.8rem;
+    }
+
+    .intro .text h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Mission Section */
+    #mission {
+        padding: 4rem 1.5rem;
+    }
+
+    #mission h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    #mission .mv {
+        gap: 2rem;
+    }
+
+    #mission .card {
+        flex: 1 1 260px;
+        padding: 1.8rem;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding: 4rem 1.5rem;
+    }
+
+    .timeline h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline .list {
+        gap: 2rem;
+    }
+
+    /* Leader Section */
+    .leader {
+        padding: 4rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .leader img {
+        width: 280px;
+    }
+
+    .leader .card {
+        padding: 1.8rem;
+    }
+
+    /* Campus Section */
+    .campus {
+        padding: 4rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .campus h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .campus-card {
+        flex: 1 1 200px;
+        padding: 1.8rem 1.3rem;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 0 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+    }
+
+    /* Contact Section */
+    #contact-form.contact-us,
+    .contact-us {
+        padding: 3rem 10%;
+    }
+
+    /* Map & Image */
+    #location.map-image,
+    .map-image {
+        padding: 3rem 10%;
+        gap: 24px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 60px 10%;
+    }
+}
+
+/* ===== Tablets (768px and below) ===== */
+@media (max-width: 768px) {
+
+    /* Hero Section */
+    .hero-about {
+        min-height: 50vh;
+    }
+
+    .hero-about-inner {
+        padding: 0 1.5rem;
+    }
+
+    .hero-about h2 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-about .lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-about .cta .btn {
+        margin: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.85rem 1.6rem;
+        font-size: 0.95rem;
+    }
+
+    /* Intro Section */
+    .intro {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .intro .text {
+        padding: 1.5rem;
+    }
+
+    .intro .text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .intro .text p {
+        font-size: 0.95rem;
+    }
+
+    .intro .photo img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Mission Section */
+    #mission {
+        padding: 3rem 1.5rem;
+    }
+
+    #mission h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #mission .mv {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #mission .card {
+        max-width: 100%;
+        flex: 1 1 auto;
+        padding: 1.5rem;
+    }
+
+    #mission .icon {
+        font-size: 2.5rem;
+    }
+
+    #mission .card h3 {
+        font-size: 1.4rem;
+    }
+
+    #mission .card p {
+        font-size: 0.95rem;
+    }
+
+    #mission .values .pill {
+        padding: 0.35rem 0.85rem;
+        font-size: 0.8rem;
+        margin: 3px;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding: 3rem 1.5rem;
+    }
+
+    .timeline h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline .list {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .t-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .timeline .year {
+        font-size: 1.3rem;
+    }
+
+    .timeline .list p {
+        font-size: 0.95rem;
+    }
+
+    /* Leader Section */
+    .leader {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .leader img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .leader .card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .leader .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .leader .card p {
+        font-size: 0.95rem;
+    }
+
+    .leader .signature {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    /* Campus Section */
+    .campus {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .campus h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .campus-card {
+        flex: 1 1 auto;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .campus-card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 12px;
+    }
+
+    .campus-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .campus-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 0 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .section-header p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-item img {
+        height: 150px;
+    }
+
+    /* Gallery Modal */
+    .gallery-modal .close {
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+    }
+
+    .modal-nav button {
+        font-size: 2rem;
+        padding: 10px 12px;
+    }
+
+    /* Contact Section */
+    #contact-form.contact-us,
+    .contact-us {
+        padding: 3rem 5%;
+    }
+
+    .contact-us .row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .content-col {
+        min-width: 100%;
+    }
+
+    .contact-us .content-col>div {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .contact-us .content-col i {
+        font-size: 2rem;
+        margin-right: 16px;
+        min-width: 45px;
+    }
+
+    .contact-us .content-col span h5 {
+        font-size: 1rem;
+    }
+
+    .contact-us .content-col span p {
+        font-size: 0.85rem;
+    }
+
+    /* Contact Form */
+    .contact-form,
+    .contact-us form {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-us form input,
+    .contact-us form textarea {
+        padding: 11px 13px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form textarea,
+    .contact-us form textarea {
+        min-height: 120px;
+    }
+
+    .send-btn {
+        width: 100%;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    /* Map & Image Section */
+    #location.map-image,
+    .map-image {
+        flex-direction: column;
+        padding: 2rem 5%;
+        gap: 20px;
+    }
+
+    .map-image .map-col,
+    .map-image .img-col {
+        min-width: 100%;
+    }
+
+    .map-image .img-col img {
+        max-height: 350px;
+    }
+
+    .img-caption {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Location Overlay */
+    .location .map-overlay {
+        bottom: 12px;
+        left: 12px;
+        padding: 12px 14px;
+        max-width: 280px;
+    }
+
+    .location .map-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .location .map-overlay p {
+        font-size: 0.88rem;
+        margin-bottom: 8px;
+    }
+
+    .location .map-overlay .btn-primary {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 5%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+
+    footer h4::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-about .footer-social {
+        justify-content: center;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+
+    .footer-newsletter input[type="email"],
+    .footer-newsletter .btn-primary {
+        width: 100%;
+    }
+}
+
+/* ===== Mobile Phones (480px and below) ===== */
+@media (max-width: 480px) {
+
+    /* Hero Section */
+    .hero-about {
+        min-height: 45vh;
+    }
+
+    .hero-about-inner {
+        padding: 0 1rem;
+    }
+
+    .hero-about h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-about .lead {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-about .cta .btn {
+        display: block;
+        margin: 0.4rem auto;
+        width: 100%;
+        max-width: 250px;
+        padding: 0.75rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    /* Intro Section */
+    .intro {
+        padding: 2.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .intro .text {
+        padding: 1.2rem;
+    }
+
+    .intro .text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .intro .text p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Mission Section */
+    #mission {
+        padding: 2.5rem 1rem;
+    }
+
+    #mission h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #mission .mv {
+        gap: 1.2rem;
+    }
+
+    #mission .card {
+        padding: 1.2rem;
+    }
+
+    #mission .icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #mission .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+
+    #mission .card p {
+        font-size: 0.9rem;
+    }
+
+    #mission .values .pill {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.75rem;
+        margin: 2px;
+    }
+
+    /* Timeline */
+    .timeline {
+        padding: 2.5rem 1rem;
+    }
+
+    .timeline h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline .list {
+        gap: 1.2rem;
+        padding: 0;
+    }
+
+    .t-item {
+        gap: 0.4rem;
+    }
+
+    .timeline .year {
+        font-size: 1.2rem;
+    }
+
+    .timeline .list p {
+        font-size: 0.9rem;
+    }
+
+    /* Leader Section */
+    .leader {
+        padding: 2.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .leader img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .leader .card {
+        padding: 1.2rem;
+    }
+
+    .leader .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .leader .card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .leader .signature {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+    }
+
+    /* Campus Section */
+    .campus {
+        padding: 2.5rem 1rem;
+        gap: 1.2rem;
+    }
+
+    .campus h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .campus-card {
+        padding: 1.2rem;
+    }
+
+    .campus-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .campus-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .campus-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Gallery */
+    #gallery {
+        padding: 0 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.7rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 120px;
+    }
+
+    .gallery-item .overlay i {
+        font-size: 1.5rem;
+    }
+
+    /* Gallery Modal */
+    .gallery-modal .modal-content {
+        max-width: 95%;
+        max-height: 75%;
+    }
+
+    .gallery-modal .close {
+        top: 10px;
+        right: 10px;
+        font-size: 1.8rem;
+    }
+
+    .modal-nav {
+        padding: 0 10px;
+    }
+
+    .modal-nav button {
+        font-size: 1.8rem;
+        padding: 8px 10px;
+    }
+
+    /* Contact Section */
+    #contact-form.contact-us,
+    .contact-us {
+        padding: 2.5rem 1rem;
+    }
+
+    .contact-us .row {
+        gap: 20px;
+    }
+
+    .contact-us .content-col>div {
+        padding: 14px;
+        margin-bottom: 14px;
+    }
+
+    .contact-us .content-col i {
+        font-size: 1.8rem;
+        margin-right: 14px;
+        min-width: 40px;
+    }
+
+    .contact-us .content-col span h5 {
+        font-size: 0.95rem;
+    }
+
+    .contact-us .content-col span p {
+        font-size: 0.8rem;
+    }
+
+    /* Contact Form */
+    .contact-form,
+    .contact-us form {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-us form input,
+    .contact-us form textarea {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .contact-form textarea,
+    .contact-us form textarea {
+        min-height: 100px;
+    }
+
+    .send-btn {
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 0.9rem;
+    }
+
+    /* Map & Image Section */
+    #location.map-image,
+    .map-image {
+        padding: 2rem 1rem;
+        gap: 16px;
+    }
+
+    .iframe-wrap {
+        padding-bottom: 75%;
+    }
+
+    .map-image .img-col {
+        gap: 12px;
+    }
+
+    .map-image .img-col img {
+        max-height: 280px;
+    }
+
+    .img-caption {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .img-caption strong {
+        font-size: 0.9rem;
+    }
+
+    .img-caption span {
+        font-size: 0.85rem;
+    }
+
+    /* Location Overlay */
+    .location .map-overlay {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px 12px;
+        max-width: calc(100% - 20px);
+    }
+
+    .location .map-overlay h3 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+    }
+
+    .location .map-overlay p {
+        font-size: 0.82rem;
+        margin-bottom: 6px;
+    }
+
+    .location .map-overlay .btn-primary {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-grid {
+        gap: 20px;
+    }
+
+    footer h4 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    footer h4::after {
+        width: 40px;
+        height: 2px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer-about .footer-social {
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .footer-links li,
+    .footer-contact li {
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+
+    .footer-newsletter input[type="email"] {
+        padding: 9px 12px;
+        font-size: 0.85rem;
+    }
+
+    .footer-newsletter .btn-primary {
+        padding: 9px 16px;
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== Extra Small Devices (360px and below) ===== */
+@media (max-width: 360px) {
+
+    .hero-about h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-about .lead {
+        font-size: 0.85rem;
+    }
+
+    .intro .text h3 {
+        font-size: 1.2rem;
+    }
+
+    #mission h2,
+    .timeline h2,
+    .campus h2,
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    #mission .card h3,
+    .campus-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .leader img {
+        max-width: 240px;
+    }
+}
+
+/* ===== Landscape mode adjustments ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .hero-about {
+        min-height: 100vh;
+    }
+
+    .hero-about h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-about .lead {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-about .cta .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+        margin: 0.3rem;
+    }
+}
+
+/* ===== Print styles ===== */
+@media print {
+
+    .hero-about,
+    .gallery-modal,
+    .footer-social,
+    .send-btn,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .intro,
+    #mission,
+    .timeline,
+    .leader,
+    .campus,
+    .contact-us {
+        page-break-inside: avoid;
+        padding: 1rem;
+    }
+
+    #mission .card,
+    .campus-card,
+    .leader .card,
+    .contact-us .content-col>div {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .iframe-wrap iframe {
+        display: none;
+    }
+
+    .iframe-wrap::after {
+        content: 'Map location not available in print';
+        display: block;
+        padding: 2rem;
+        text-align: center;
+        color: #666;
+    }
+}
