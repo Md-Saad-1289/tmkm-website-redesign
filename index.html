@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .loadmore{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto 0;
+    width: 180px;
+    border-radius: 15px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -294,6 +305,7 @@
                 <div class="gallery-grid">
                     <!-- Gallery items will be dynamically inserted here -->
                 </div>
+                <a class="btn btn-primary loadmore" role="button">Load More ...</a>
             </div>
 
             <!-- Lightbox Modal -->
@@ -356,7 +368,7 @@
                     <!-- News Item 1 -->
                     <article class="news-card">
                         <div class="news-thumb">
-                            <img src="https://t3.ftcdn.net/jpg/04/91/80/06/360_F_491800636_NBQoU1jxdXeUQ87wSfpXJza5xfE3PeAh.jpg"
+                            <img src="assets/news/annual-examination-news.png"
                                 alt="News 1">
                         </div>
                         <div class="news-content">
@@ -369,7 +381,7 @@
                     <!-- News Item 2 -->
                     <article class="news-card">
                         <div class="news-thumb">
-                            <img src="assets/news/annual-examination-news.png"
+                            <img src="assets/news/admission-open.png"
                                 alt="News 2">
                         </div>
                         <div class="news-content">
@@ -459,34 +471,111 @@
     <script src="js/script.js"></script>
     <script src="js/index.js"></script>
     <script>
-   // Load gallery images
-const galleryImages = [
+  // Config
+  const numLoad = 3;
+  const initialLoad = 4;
+
+  const galleryImages = [
     'assets/gallery/g-1.jpg',
     'assets/gallery/g-2.jpg',
     'assets/gallery/g-3.jpg',
     'assets/gallery/g-4.jpg',
     'assets/gallery/g-5.jpg',
-    'assets/gallery/g-6.jpg'
-];
+    'assets/gallery/g-6.jpg',
+    'assets/gallery/g-7.jpg',
+    'assets/gallery/g-8.jpg',
+    'assets/gallery/g-9.jpg',
+    'assets/gallery/g-10.jpg',
+    'assets/gallery/g-11.jpg',
+    'assets/gallery/g-12.jpg',
+    'assets/gallery/g-13.jpg',
+    'assets/gallery/g-14.jpg',
+    'assets/gallery/g-15.jpg',
+    'assets/gallery/g-16.jpg',
+    'assets/gallery/g-17.jpg',
+    'assets/gallery/g-18.jpg',
+    'assets/gallery/g-19.jpg',
+    'assets/gallery/g-20.jpg'
+  ];
 
-const galleryGrid = document.querySelector('.gallery-grid');
+  const galleryGrid = document.querySelector('.gallery-grid');
+  const loadbtn = document.querySelector('.loadmore');
 
-// Clear existing content (optional)
-galleryGrid.innerHTML = '';
+  // Defensive checks
+  if (!galleryGrid) {
+    console.warn('No .gallery-grid found in DOM.');
+  }
 
-// Loop through images and create elements
-galleryImages.forEach((src, index) => {
+  // Helper to create item
+  function createGalleryItem(src, index) {
     const div = document.createElement('div');
-    div.classList.add('gallery-item');
+    div.className = 'gallery-item';
 
     const img = document.createElement('img');
     img.src = src;
-    img.setAttribute('data-index', index);
+    img.loading = 'lazy';                 
+    img.alt = `Gallery image ${index + 1}`; 
+    img.dataset.index = index;
+
+    // On load -> reveal with class for transition
+    img.addEventListener('load', () => {
+      // add reveal class on parent
+      div.classList.add('reveal');
+    });
+
+    // On error -> show simple placeholder
+    img.addEventListener('error', () => {
+      const placeholder = document.createElement('div');
+      placeholder.className = 'placeholder';
+      placeholder.textContent = 'Image not available';
+      // Clean up and show placeholder
+      div.innerHTML = '';
+      div.appendChild(placeholder);
+    });
 
     div.appendChild(img);
-    galleryGrid.appendChild(div);
-});
+    return div;
+  }
 
+  // Render items from start index count length
+  function renderItems(startIndex, count) {
+    const fragment = document.createDocumentFragment();
+    for (let i = startIndex; i < startIndex + count && i < galleryImages.length; i++) {
+      fragment.appendChild(createGalleryItem(galleryImages[i], i));
+    }
+    galleryGrid.appendChild(fragment);
+
+    const totalLoaded = galleryGrid.querySelectorAll('.gallery-item').length;
+    if (totalLoaded >= galleryImages.length) {
+      loadbtn.disabled = true;
+      loadbtn.style.display = 'none';
+    }
+  }
+
+  // Initial load
+  renderItems(0, initialLoad);
+
+  // Click handler for load more
+  loadbtn.addEventListener('click', () => {
+    if (loadbtn.disabled) return;
+    loadbtn.disabled = true;
+    loadbtn.textContent = 'Loading...';
+
+    // small timeout to simulate loading (optional)
+    setTimeout(() => {
+      const currentItems = galleryGrid.querySelectorAll('.gallery-item').length;
+      renderItems(currentItems, numLoad);
+
+      // restore button if there are still items
+      const totalLoaded = galleryGrid.querySelectorAll('.gallery-item').length;
+      if (totalLoaded < galleryImages.length) {
+        loadbtn.disabled = false;
+        loadbtn.textContent = 'Load more';
+      } else {
+        loadbtn.style.display = 'none';
+      }
+    }, 250);
+  });
 </script>
     
     </body>
